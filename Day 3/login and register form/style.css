@@ -1,0 +1,56 @@
+h1{
+    
+        font-size: 120px;
+        margin: 20px;
+        padding: 20px;
+        color:whitesmoke;
+        font-weight: 700;
+}
+
+#sign{
+    margin-left: 201px;
+    font-weight: 700;
+}
+
+h2 
+{
+    font-size: 2rem;
+    margin-left: 240px;
+    margin-top: -9px;
+    padding: 10px;
+    font-weight: 700;
+    margin-right: 226;
+}
+
+.Login-form{
+    margin: 10px;
+}
+
+.col-form-label {
+    padding-top: calc(.375rem + 1px);
+    padding-bottom: calc(.375rem + 1px);
+    margin-bottom: 0;
+    font-size: smaller;
+    line-height: 1.5;
+}
+body{
+    background-image: url(./facebbok.jpeg)
+}
+
+.card{
+    
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+}
+
+ #reg-form{
+    margin: 10px;
+    padding: 10px;
+    margin-left: 46px;
+    margin-right: -120px;
+}
+
+#btn-reg{
+    margin-left: 264px;
+}
+
+
