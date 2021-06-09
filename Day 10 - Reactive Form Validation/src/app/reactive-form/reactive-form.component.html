@@ -1,0 +1,166 @@
+
+<h1> Form Validation</h1>
+<div class="container-fluid">
+
+    
+  <div class="card">
+    <!-- main form -->
+    <div class="row">
+      <form action="" style="width:100%;" class="app-box" [formGroup]="userForm" >
+        <div class="col">
+  
+          <!-- personal info -->
+          <div class="row"> 
+            <div class="col">
+              <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text"  [ngClass]="{'form-control': true,
+                'is-invalid': !f.firstname?.valid && f.firstname?.untouched,
+                'is-valid': f.firstname?.valid}"    placeholder="Enter last name"     placeholder="Enter first name" formControlName="firstname">
+                <small *ngIf="f.firstname?.errors?.required && f.firstname?.untouched"  class="form-text custom-invalid-feedback"><li>Field is required</li></small>
+              <small *ngIf="f.firstname?.errors?.minlength && f.firstname?.untouched"  class="form-text custom-invalid-feedback"><li>Name should be atleast 5 characters.</li></small>
+              <small *ngIf="f.firstname?.errors?.maxlength && f.firstname?.untouched"  class="form-text custom-invalid-feedback"><li>Maximum name should be only 8 characters.</li></small>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text"  [ngClass]="{'form-control': true,
+                'is-invalid': !f.lastname?.valid && f.lastname?.untouched,
+                'is-valid': f.lastname?.valid}"    placeholder="Enter last name"     placeholder="Enter last name" formControlName="lastname">
+                <small *ngIf="f.lastname?.errors?.required && f.lastname?.untouched"  class="form-text custom-invalid-feedback"><li>Field is required</li></small>
+                <small *ngIf="f.lastname?.errors?.minlength && f.lastname?.untouched"  class="form-text custom-invalid-feedback"><li>Maximum name should be atleast 5 characters</li></small>
+              
+              </div>
+            </div>
+          </div>
+          <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" [ngClass]="{'form-control': true,
+              'is-invalid': !f.password?.valid && f.email?.untouched,
+              'is-valid': f.password?.valid}"    placeholder="password"     placeholder="Enter password" formControlName="password">
+              <small *ngIf="f.password?.errors?.required && f.password?.untouched"  class="form-text custom-invalid-feedback"><li>Field is required</li></small>
+              <small *ngIf="f.password?.errors?.pattern && f.password?.untouched"  class="form-text custom-invalid-feedback"><li>password should be only numbers </li></small>
+              <small *ngIf="f.password?.errors?.maxlength && f.password?.untouched"  class="form-text custom-invalid-feedback"><li>password must contain 7 digit number only </li></small>
+            </div>
+          </div>
+
+
+          <div class="col">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text"  [ngClass]="{'form-control': true,
+              'is-invalid': !f.email?.valid && f.email?.untouched,
+              'is-valid': f.email?.valid}"    placeholder="Enter your mail"       formControlName="email">
+              <small *ngIf="f.email?.errors?.required && f.email?.untouched"  class="form-text custom-invalid-feedback"><li>Field is required</li></small>
+              <small *ngIf="f.email?.errors?.email && f.email?.untouched"  class="form-text custom-invalid-feedback"><li>Enter the valid Email Id</li></small>
+            
+            </div>
+          </div>
+
+
+          </div>
+  
+  
+          <!-- seperator -->
+          <div class="row">
+            <div class="col">
+              <hr>
+            </div>
+          </div>
+  
+  
+          <!-- address form portion -->
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="Address">Address</label>
+                <input type="text" class="form-control" id="addText"  placeholder="Enter the address" formControlName="address"
+                [ngClass]="{'form-control': true, 'is-invalid': !f.address?.valid && f.address?.untouched, 'is-valid': f.address?.valid}">
+                
+                <small *ngIf="f.address?.errors?.required && f.address?.untouched " class="form-text custom-invalid-feedback"><li>Field is required</li></small>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="form-group">
+                <label for="Gender">Gender</label>
+                <select id="inputState"   formControlName="gender"  class="form-control"
+                 [ngClass]="{'form-control': true, 'is-invalid': !f.gender?.valid && f.state?.untouched, 'is-valid': f.gender?.valid}" >
+                  <option selected [ngValue]='null'></option>
+                  <option *ngFor="let person of gender" [value]="person">{{person}}</option>
+                </select>
+                <small *ngIf="f.gender?.errors?.required && f.gender?.untouched" class="form-text custom-invalid-feedback"><li>Field is required</li></small>
+              </div>
+            </div>
+
+
+            <div class="col-12">
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city"  placeholder="Enter city" formControlName="city"
+                    
+                     [ngClass]="{'form-control': true, 'is-invalid': !f.city?.valid && f.city?.untouched, 'is-valid': f.city?.valid}">
+                    <small *ngIf="f.city?.errors?.required && f.city?.untouched" class="form-text custom-invalid-feedback"><li>Field is required</li></small>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="state">State</label>
+                    <select id="inputState"   formControlName="state"  class="form-control"
+                     [ngClass]="{'form-control': true, 'is-invalid': !f.state?.valid && f.state?.untouched, 'is-valid': f.state?.valid}" >
+                      <option selected [ngValue]='null'></option>
+                      <option *ngFor="let item of state" [value]="item">{{item}}</option>
+                    </select>
+                    <small *ngIf="f.state?.errors?.required && f.state?.untouched" class="form-text custom-invalid-feedback"><li>Field is required</li></small>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="zipcode">Zip Code</label>
+                    <input type="text"  id="zipcode" formControlName="zip" placeholder="Enter Zipcode" pattern="^[0-9]{6}$"
+                     [ngClass]="{'form-control': true, 'is-invalid': !f.zip?.valid && f.zip?.untouched, 'is-valid': f.zip?.valid}">
+                     <small *ngIf="f.zip?.errors?.required && f.zip?.untouched" class="form-text custom-invalid-feedback"><li>Field is required</li></small>
+                    <small *ngIf="f.zip?.errors?.pattern && f.zip?.untouched" class="form-text custom-invalid-feedback"><li>value should be 6 Digit number</li></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- seperator -->
+          <div class="row">
+            <div class="col">
+              <hr>
+            </div>
+          </div>
+  
+          <!-- final action buttons -->
+          <div class="row justify-content-center">
+            <div class="col-2">
+              <button type="button"  [disabled]="!userForm.valid"   class="btn btn-primary" (click)="submit()"  >Submit</button>
+            </div>
+            <div class="col-2">
+                <button type="button" id="reset"  class="btn btn-warning" (click)="reset()">Reset</button>
+              </div>
+          </div>
+             
+            
+          
+        </div>
+      </form>
+    </div>
+    </div>
+
+   
+  </div>
+
+
+
+
+
+
