@@ -1,0 +1,92 @@
+h1{
+    
+    font-size: 120px;
+    margin: 20px;
+    padding: 20px;
+    color:whitesmoke;
+}
+
+h2{
+font-size: 2rem;
+margin-left: 213px;
+margin-top: 10px;
+padding: 10px;
+}
+
+.Login-form{
+margin: 10px;
+}
+
+#reg-form{
+    word-wrap: normal;
+}
+
+
+/* base-component  */
+
+h4{
+    height: 96px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    padding: 30px;
+    
+}
+
+.base{
+    margin-left: 341px;
+    margin-top: 10px;
+}
+
+.navbar-nav{
+    margin-left: 63rem;
+    
+    font-weight: bolder;
+}
+
+/* home-page */
+
+#home {
+    height: 100%;
+}
+
+#home-cover {
+    /* height: 500%; */
+    background-image: url(../assets/img/bg-home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+
+}
+
+#home-content-box {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+#home-content-box-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#home-heading h3 {
+    font-size: 55px;
+    /* font-weight: 700; */
+    color: #fff;
+    margin: 20px 0 20px 20px;
+    font-family: emoji;
+    height: 500px;
+}
+
+
+
+
+
+
+/* #reg-form{
+margin: 10px;
+padding: 10px;
+} */

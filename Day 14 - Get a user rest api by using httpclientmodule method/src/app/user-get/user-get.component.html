@@ -1,0 +1,33 @@
+
+ <button type="button" class="btn btn-primary"  (click)="getdata()">Get User Data</button>
+<div class="col-  table-content">
+    <div class="row">
+        
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+            <th>UserId</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let get of cmgdata" >
+               
+                <td>{{get.id}}</td>
+                <td>{{get.name}}</td>
+                <td>{{get.username}}</td>
+                <td>{{get.email}}</td>
+                
+
+                
+              
+               
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
