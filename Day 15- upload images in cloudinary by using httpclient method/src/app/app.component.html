@@ -1,0 +1,95 @@
+<!-- <div class="row">
+  <div class="col-md-12">
+     <div class="text-center">
+
+      <h4 id="heading">Bluescope</h4>
+      
+     </div>
+  </div>
+  </div>
+
+
+<div class="base">
+  
+    <app-base ></app-base>
+    
+  </div>
+  <div class="col-md-10"  style="height: 400px;">
+    <router-outlet></router-outlet> 
+  </div> -->
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" style="font-family: math;">BLUESCOPE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link active" routerLink="login">Login <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="reg">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="table">User Table</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="userget">User List</a>
+        </li>
+   
+      </ul>
+    </div>
+  </nav>
+  <section id="home">
+
+    <div id="home-cover" class="bg-parallax animated fadeIn">
+  
+        <div id="home-content-box">
+  
+            <div id="home-content-box-inner">
+  
+                <div id="home-heading" class="animated zoomIn ">
+  
+                    <h3> Welcome <br>
+                        Our Organization</h3>
+                </div>
+                         <router-outlet></router-outlet>  
+                
+            </div>
+        </div>
+    </div>
+    <div>
+      <!-- <img src="https://res.cloudinary.com/demo/image/upload/dog.jpg" /> -->
+     <div class="col-6" style="margin-left: 50rem;">
+       <h2>upload the image</h2>
+      <input type="file" (change)="onfileselected($event)">
+      <button type="button" (click)="upload()">Upload</button>
+      </div>
+      </div>
+    
+  </section>
+   <!-- <router-outlet></router-outlet>  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
