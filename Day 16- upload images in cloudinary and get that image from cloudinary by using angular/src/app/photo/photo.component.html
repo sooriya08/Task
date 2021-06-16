@@ -1,0 +1,24 @@
+<div>
+    <div class="row">
+        <div class="col-6">
+    <form action="" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" ng2FileSelect [uploader]="uploader"   />`
+`<button (click)="upload()" class="btn">Upload</button>
+
+    </form>
+    <label>Choose file</label>
+    </div>
+    
+
+<div class="col-6">
+<button type="button" class="btn get" (click)="getImageFromService()">Get Image</button>
+
+<img [src]="imageToShow"
+     alt="Place image title"
+     *ngIf="!isImageLoading; else noImageFound">
+<ng-template #noImageFound>
+     <img src="fallbackImage.png" alt="Fallbackimage">
+</ng-template>
+</div>
+    </div>
+    </div>
