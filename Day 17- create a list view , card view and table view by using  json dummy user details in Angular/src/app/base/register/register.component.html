@@ -1,0 +1,99 @@
+<!-- 
+
+  <h1>Table view</h1> 
+    <div class="col">
+      <div class="card">
+         <form >
+            <h2 class="title"> Sign-Up</h2>
+            <p class="subtitle">Don't have an account? <a href="#"> sign Up</a></p> 
+            <p class="or"><span>or</span></p>
+      
+            <div class="sign-up">
+               <label for="email"> <b>Name</b></label>
+               <input type="text" placeholder="Enter Name" name="name" required>
+               <label for="email"><b>Email</b></label>
+               <input type="email" placeholder="Enter email" name="email" required>
+               <label for="psw"><b>Password</b></label>
+               <input type="password" placeholder="Enter Password" name="psw" required>
+               
+            </div>
+            <button class="cta-btn" (click)="regbtn()">Sign In</button>
+            <a class="forget-pass" href="#">Forgot password?</a>
+         </form>
+      </div>
+     
+      </div>  -->
+  
+    
+ <!-- json table -->
+ <div>
+ <h1 class="table-head">Table view</h1>
+ </div>
+     <table class="table">
+      <thead>
+         <tr class="thead-dark" scope="row">
+            <th style="padding-right: 10px;" *ngFor="let name of schema">{{name.name}}</th>
+            <!-- <th>ACCOUNT_NUMBER</th>
+            <th>CURRENT_ACCOUNT_TYPE</th>
+            <th>ACCOUNT_NAME</th>
+            <th>CURRENCY_CODE</th>
+            <th>AVL_BAL</th>
+            <th>LEDGER_BALANCE</th>
+            <th>EQ_AVL_BAL</th>
+            <th>ACCOUNT_TYPE_CODE</th>
+            <th>ACCOUNT_STATUS</th>
+            <th>OPENING_DATE</th> -->
+        </tr>
+
+      </thead>
+
+   <tbody *ngFor="let data of datas ">
+      <tr>
+         <td style="padding-right: 30px;">{{data.REFERENCE_ID}}</td>
+         <td>{{data.ACCOUNT_NUMBER}}</td>
+         <td>{{data.CURRENT_ACCOUNT_TYPE}}</td>
+         <td>{{data.ACCOUNT_NAME}}</td>
+         <td>{{data.CURRENCY_CODE}}</td>
+         <td>{{data.AVL_BAL}}</td>
+         <td>{{data.LEDGER_BALANCE}}</td>
+         <td>{{data.EQ_AVL_BAL}}</td>
+         <td>{{data.ACCOUNT_TYPE_CODE}}</td>
+         <td>{{data.ACCOUNT_STATUS}}</td>
+         <td>{{data.OPENING_DATE}}</td>
+         </tr>
+   </tbody>
+
+    </table> 
+    
+
+
+     
+     <h1>card view</h1>
+    <div class="card"  *ngFor="let data of datas">
+      
+      <div class="card-header" >
+        {{cardheader.name}} : {{data.ACCOUNT_NUMBER}} 
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{cardfields[0].name}} : {{data.CURRENT_ACCOUNT_TYPE_VALUE}}</li>
+        <li class="list-group-item">{{cardfields[1].name}} : {{data.ACCOUNT_NAME}}</li>
+        <li class="list-group-item">{{cardfields[2].name}} : {{data.AVL_BAL}}</li>
+        <li class="list-group-item">{{cardfields[3].name}} : {{data.CURRENCY_CODE}}</li>
+        <li class="list-group-item">{{cardfields[4].name}} : {{data.LEDGER_BALANCE}}</li>
+        
+      </ul>
+    </div>
+    
+
+    <div>
+       <h2>List view</h2>
+    </div>
+    <ul class="list-group" *ngFor="let data of datas">
+      <li class="list-group-item" style="color: blueviolet;">{{listview[0].name}}: {{data.ACCOUNT_NUMBER}}</li>
+      <li class="list-group-item">{{listview[1].name}}: {{data.ACCOUNT_NAME}}</li>
+      <li class="list-group-item">{{listview[1].name}}: {{data.LEDGER_BALANCE}}</li>
+      <li class="list-group-item">{{listview[2].name}}: {{data.AVL_BAL}}</li>
+      <li class="list-group-item">{{listview[3].name}}: {{data.EQ_AVL_BAL}}</li>
+      <li class="list-group-item">{{listview[4].name}}: {{data.OPENING_DATE}}</li>
+      <br>
+    </ul>
