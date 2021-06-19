@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+/* body{
+    background-image: url(./assets/facebbok.jpeg);
+} */
+
+/* body{
+    background-image: url(./assets/bg-img.jpeg);
+    background-size: contain;
+} */
+
+body {
+  background-image: url(./assets/bank-1.jpg);
+  background-size: cover;
+}
+
+
+@media (max-width: 320px) and (min-width: 450px) {
+  .col-sm-4 {
+    width: 28rem;
+  }
+
+  .card-text {
+    font-size: small;
+    margin-left: -7rem;
+  }
+
+  h5 {
+    font-size: small;
+
+  }
+
+  .card {
+    width: 18rem;
+    padding: 10px;
+    margin: 10px;
+
+    background-color: black;
+    color: blanchedalmond;
+    margin-left: 31px;
+  }
+}

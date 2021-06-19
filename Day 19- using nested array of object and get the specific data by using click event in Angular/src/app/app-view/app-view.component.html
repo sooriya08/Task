@@ -1,0 +1,43 @@
+
+<div class="row">
+    <div class="col-2"></div> 
+    <div class="col-2"></div> 
+    <div class="col-2"></div> 
+    <div class="col-2"></div> 
+    <div class="col-2">
+        <!-- <button type="button" class="btn btn-warning" (click)="viewCard()">View card</button> -->
+    </div> 
+
+</div>
+
+
+
+
+<div class="row">
+    
+        <div class="card col-md-3 col-sm-3" (click)="admin()" style="width: 18rem;padding: 10px;margin: 10px;margin-left: 28px;background-color: black;color: blanchedalmond;" *ngFor="let data of app">
+            
+            <div class="card-body">
+              
+              <h5 class="card-title" (click)="display(data)" style="cursor: pointer;text-transform: uppercase;"><i class="fa  fa-bank fa-3px"></i> {{data.name}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                <!-- <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Menu Group
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#"><i class="fa fa-university"></i> {{data.menuGroup[0].name}}</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-key"></i> {{data.menuGroup[0].permission}}</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-link"></i> {{data.menuGroup[0].url}}</a>
+                    </div>
+                  </div> -->
+              </h6>
+              <p class="card-text" style="margin-left: -7rem;"><i class="fa fa-lock" aria-hidden="true" ></i> {{data.style.textClass}}</p>
+              <!-- <a href="#" class="card-link"></a>
+              <a href="#" class="card-link">Another link</a> -->
+              
+            </div>
+            
+          </div>
+    </div>
+
