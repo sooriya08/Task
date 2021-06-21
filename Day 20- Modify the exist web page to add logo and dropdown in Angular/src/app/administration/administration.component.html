@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-top: -9px;">
+    <a class="navbar-brand" id="navbar" style="text-transform:uppercase;color: rgb(163, 113, 113);margin-left: -14px;font-weight: 500;" > {{jsondata.name}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" *ngFor="let menu of jsonmenuGroup">
+      <!-- <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link"  (click)="menu(menu)">{{menu.name}} <span class="sr-only">(current)</span></a>
+        </li>
+        
+      </ul> -->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: whitesmoke;color: black;border: none;">
+          {{menu.name}}
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"  >
+          <a class="dropdown-item" style="font-size: small;" href="#"><li class="fa fa-user fa-1px"></li> {{menu.permission}}</a>
+          <!-- <a class="dropdown-item"style="font-size: small;" *ngIf="jsondata!valid" href="#"><li class="fa fa-link fa-1x"></li> {{menu.url}}</a> -->
+          <a class="dropdown-item"style="font-size: small;" href="#"><i class="fa fa-code fa-1px"></i> {{menu.role}}</a>
+          <a class="dropdown-item" style="font-size: small;"href="#"><i class="fa  fa-code fa-1px"></i> {{menu.entitySubTypeCode}}</a>
+          <a class="dropdown-item"style="font-size: small;" href="#"><i class="fa  fa-paragraph fa-1px"></i> {{menu.description}}</a>
+          <a class="dropdown-item"style="font-size: small;" href="pageId"><i class="fa fa-id-badge fa-1px"></i> {{menu.pageId}}</a>
+
+          <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+        </div>
+      </div>
+     
+    </div>
+  </nav>
+
+  <p style="text-align: center;text-transform: uppercase;font-size: large;font-weight: 500;font-family: emoji;margin-top: 30px;">{{jsondata.title}}</p>
+
+
+
+  

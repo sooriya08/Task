@@ -1,0 +1,71 @@
+h1 {
+
+  font-size: 120px;
+  margin: 20px;
+  padding: 20px;
+  color: whitesmoke;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-left: 213px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.Login-form {
+  margin: 10px;
+}
+
+#reg-form {
+  word-wrap: normal;
+}
+
+
+/* base-component  */
+
+h4 {
+  height: 96px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  padding: 30px;
+
+}
+
+.base {
+  margin-left: 341px;
+  margin-top: 10px;
+}
+
+.text-center img {
+  width: 124px;
+}
+
+/* Bento menu */
+
+.circles {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.circles .circle {
+  background-color: #777777;
+  border-radius: 50%;
+  padding: 3px;
+  margin: 1px;
+}
+
+
+
+
+
+
+/* #reg-form{
+margin: 10px;
+padding: 10px;
+} */
